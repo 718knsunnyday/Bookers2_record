@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @books = @user.books
+    @today_book=@books.where('@books': 'Date.new')
     @book = Book.new
   end
 
